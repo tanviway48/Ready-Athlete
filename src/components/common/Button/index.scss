@@ -1,0 +1,27 @@
+$RA1: rgb(17, 154, 151);
+$RA2: rgb(113, 222, 149);
+$RA3: rgb(241, 85, 77);
+$RA4: rgb(41, 42, 42);
+$RA5: rgb(48, 51, 51);
+$RA6: rgb(236, 245, 245);
+$RA7: #f3b044;
+$RA8: #73c6b6;
+.common-btn {
+  width: 200px;
+  height: 30px;
+  cursor: pointer;
+  background-color: $RA1;
+  border: 2px solid $RA7;
+  color: $RA7;
+  border-radius: 30px;
+  font-family: system-ui;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 7px 0;
+}
+
+.common-btn:hover {
+  background-color: $RA7;
+  border: 2px solid $RA1;
+  color: $RA1;
+}

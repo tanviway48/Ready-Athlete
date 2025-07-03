@@ -1,0 +1,83 @@
+$RA1: rgb(17, 154, 151);
+$RA2: rgb(113, 222, 149);
+$RA3: rgb(241, 85, 77);
+$RA4: rgb(41, 42, 42);
+$RA5: rgb(48, 51, 51);
+$RA6: rgb(236, 245, 245);
+$RA7: #f3b044;
+$RA8: #73c6b6;
+
+.topbar-main {
+  width: 100%;
+  height: 70px;
+  background-color: $RA1;
+  display: flex;
+  align-items: center;
+}
+.logonav {
+  width: 90px;
+  margin-top: 1px;
+}
+.react-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 65%;
+  margin-left: 100px;
+}
+.react-icon {
+  cursor: pointer;
+  color: white;
+}
+.react-icon:hover {
+  color: $RA7;
+}
+.userpic {
+  width: 50px;
+  position: absolute;
+  right: 30px;
+  cursor: pointer;
+}
+
+
+.popup-position {
+  position: absolute;
+  right: 10px;
+  top: 65px;
+  z-index: 99;
+}
+
+.search-results {
+  position: absolute;
+  left: 100px;
+  top: 60px;
+  width: 240px;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #bbbbbb;
+
+  .search-inner {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .name {
+      font-family: system-ui;
+      font-size: 18px;
+    }
+  }
+
+  .search-inner:hover {
+    background-color: #bbbbbb;
+  }
+}

@@ -1,0 +1,275 @@
+$RA1: rgb(17, 154, 151);
+$RA2: rgb(113, 222, 149);
+$RA3: rgb(241, 85, 77);
+$RA4: rgb(41, 42, 42);
+$RA5: rgb(48, 51, 51);
+$RA6: rgb(236, 245, 245);
+$RA7: #f3b044;
+$RA8: #73c6b6;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.login-wrapper {
+  background-color: rgb(255, 255, 255) !important;
+  height: 100vh;
+  .login-wrapper-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .heading {
+    font-family: system-ui;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.9);
+  }
+
+  .sub-heading {
+    margin-top: -20px;
+    font-family: system-ui;
+  }
+}
+
+.login-btn {
+  width: 300px;
+  height: 50px;
+  cursor: pointer;
+  background-color: $RA1;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  font-family: system-ui;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.login-btn:hover {
+  background-color: $RA7;
+}
+
+.auth-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+}
+
+.Logo {
+  width: 100%;
+}
+
+.hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5em;
+  opacity: 0.5;
+  &:before {
+    content: "";
+    // use the linear-gradient for the fading effect
+    // use a solid background color for a solid bar
+    background: linear-gradient(to right, transparent, #818078, transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+  }
+  &:after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    color: black;
+
+    padding: 0 0.5em;
+    line-height: 1.5em;
+    // this is really the only tricky part, you need to specify the background color of the container element...
+    color: #818078;
+    background-color: #fcfcfa;
+  }
+}
+
+.google-btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .google-btn {
+    width: 300px !important;
+  }
+
+  .go-to-signup {
+    font-size: 18px;
+  }
+
+  .join-now {
+    color: $RA1;
+    font-family: system-ui;
+    cursor: pointer;
+    font-size: 18px;
+  }
+}
+
+.login-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 0 2rem;
+
+  .login-form {
+    flex: 1;
+    max-width: 50%;
+
+    .login-wrapper-inner {
+      max-width: 400px;
+      margin: auto;
+    }
+  }
+
+  .login-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .Logo {
+      max-width: 100%;
+      height: 100%;
+    }
+  }
+
+  // Make the layout responsive for smaller screens
+  @media (max-width: 768px) {
+    flex-direction: column; // Stack form and image vertically
+    padding: 1rem;
+
+    .login-form,
+    .login-image {
+      max-width: 100%; // Make both elements take full width
+      flex: none; // Remove flex sizing
+    }
+
+    .login-form {
+      margin-bottom: 2rem; // Add spacing between form and image
+    }
+
+    .login-image {
+      .Logo {
+        width: 0%; // Adjust the image size for mobile view
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .login-image {
+      .Logo {
+        width: 80%; // Further adjust image size for very small screens
+      }
+    }
+
+    .login-form {
+      .login-wrapper-inner {
+        max-width: 90%; // Make the form more compact for small screens
+      }
+
+      .auth-inputs {
+        input {
+          font-size: 14px; // Reduce input size for mobile
+        }
+      }
+
+      .login-btn {
+        font-size: 14px; // Adjust button size for smaller screens
+      }
+    }
+  }
+}
+.register-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 0 2rem;
+
+  .register-form {
+    flex: 1;
+    max-width: 50%;
+
+    .login-wrapper-inner {
+      max-width: 400px;
+      margin: auto;
+    }
+  }
+
+  .register-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .linkedinLogo {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  // Responsive layout for smaller screens
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 1rem;
+
+    .register-form,
+    .register-image {
+      max-width: 100%;
+      flex: none;
+    }
+
+    .register-form {
+      margin-bottom: 2rem;
+    }
+
+    .register-image {
+      .linkedinLogo {
+        width: 60%;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .register-image {
+      .linkedinLogo {
+        width: 80%;
+      }
+    }
+
+    .register-form {
+      .login-wrapper-inner {
+        max-width: 90%;
+      }
+
+      .auth-inputs {
+        input {
+          font-size: 14px;
+        }
+      }
+
+      .login-btn {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+
+
+

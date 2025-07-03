@@ -1,0 +1,49 @@
+$RA1: rgb(17, 154, 151);
+$RA2: rgb(113, 222, 149);
+$RA3: rgb(241, 85, 77);
+$RA4: rgb(41, 42, 42);
+$RA5: rgb(48, 51, 51);
+$RA6: rgb(225, 239, 239);
+$RA7: #f3b044;
+$RA8: #73c6b6;
+$RA9: rgba(238, 243, 244, 0.87);
+
+.profile-edit-inputs {
+  display: grid;
+  margin-top: 40px;
+  gap: 20px;
+
+  label {
+    font-family: system-ui;
+    margin-bottom: -15px;
+  }
+
+  .edit-input {
+    width: 300px;
+    height: 40px;
+  }
+}
+
+.save-container {
+  display: flex;
+  justify-content: center;
+}
+
+.save-btn {
+  width: 300px;
+  height: 50px;
+  cursor: pointer;
+  background-color: $RA1;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  font-family: system-ui;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.close-icon {
+  cursor: pointer;
+}
